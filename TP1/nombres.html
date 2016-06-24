@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hello World!</title>
+</head>
+
+<body>
+
+    <script>
+    var nombre;
+    while(true){
+	    do{
+	    	var nombre = parseInt(prompt('Entrez un nomre entre 0 et 999'));
+	    }while(nombre<0 || nombre>999);
+	    if(nombre){
+	    function convertirNombre(nb){
+	    	if (nb==0){
+	    		return 'zéro';
+	    	}
+	    	var r = nb%10;
+	    	var d = nb%100-r;
+	    	var c = nb%1000-d-r;
+	    	var lettres = [];
+	    	switch(c){
+	    		case 100:
+	    			lettres.push('cent');
+	    			break;
+	    		case 200:
+	    			lettres.push('deux cents');
+	    			break;
+	    		case 300:
+					lettres.push('trois cents');
+	    			break; 
+	    		case 400:
+					lettres.push('quatre cents');
+	    			break; 
+	    		case 500:
+	    			lettres.push('cinq cents');
+	    			break; 
+	    		case 600:
+	    			lettres.push('six cents');
+	    			break; 
+	    		case 700:
+	    			lettres.push('sept cents');
+	    			break; 
+	    		case 800:
+	    			lettres.push('huit cents');
+	    			break; 
+	    		case 900:
+	    			lettres.push('neuf cents');
+	    			break; 
+	    	}
+	    	switch(d){
+	    		case 10:
+	    			switch(r){
+	    				case 0:
+	    					lettres.push('dix');
+	    				case 1:
+	    					lettres.push('onze');
+	    					break;
+	    				case 2:
+	    					lettres.push('douze');
+	    					break;
+	    				case 3:
+	    					lettres.push('treize');
+	    					break;
+	    				case 4:
+	    					lettres.push('quatorze');
+	    					break;
+	    				case 5:
+	    					lettres.push('quinze');
+	    					break;
+	    				case 6:
+	    					lettres.push('seize');
+	    					break;
+	    				case 7:
+	    					lettres.push('dix sept');
+	    					break;
+	    				case 8:
+	    					lettres.push('dix huit');
+	    					break;
+	    				case 9:
+	    					lettres.push('dix neuf');
+	    					break;
+	    			}
+	    			break;
+	    		case 20:
+	    			lettres.push('vingt');
+	    			break;
+	    		case 30:
+	    			lettres.push('trente');
+	    			break;
+	    		case 40:
+	    			lettres.push('quarante');
+	    			break;
+	    		case 50:
+	    			lettres.push('cinquante');
+	    			break;
+	    		case 60:
+	    			lettres.push('soixante');
+	    			break;
+	    		case 70:
+	    			switch(r){
+	    				case 0:
+	    					lettres.push('soixante dix');
+	    				case 1:
+	    					lettres.push('soixante et onze');
+	    					break;
+	    				case 2:
+	    					lettres.push('soixante douze');
+	    					break;
+	    				case 3:
+	    					lettres.push('soixante treize');
+	    					break;
+	    				case 4:
+	    					lettres.push('soixante quatorze');
+	    					break;
+	    				case 5:
+	    					lettres.push('soixante quinze');
+	    					break;
+	    				case 6:
+	    					lettres.push('soixante seize');
+	    					break;
+	    				case 7:
+	    					lettres.push('soixante dix sept');
+	    					break;
+	    				case 8:
+	    					lettres.push('soixante dix huit');
+	    					break;
+	    				case 9:
+	    					lettres.push('soixante dix neuf');
+	    					break;
+	    				}
+	    			break;
+	    		case 80:
+	    			lettres.push('quatre vingt');
+	    			break;
+	    		case 90:
+	    			switch(r){
+	    				case 0:
+	    					lettres.push('quatre vingt dix');
+	    				case 1:
+	    					lettres.push('quatre vingt et onze');
+	    					break;
+	    				case 2:
+	    					lettres.push('quatre vingt douze');
+	    					break;
+	    				case 3:
+	    					lettres.push('quatre vingt treize');
+	    					break;
+	    				case 4:
+	    					lettres.push('quatre vingt quatorze');
+	    					break;
+	    				case 5:
+	    					lettres.push('quatre vingt quinze');
+	    					break;
+	    				case 6:
+	    					lettres.push('quatre vingt seize');
+	    					break;
+	    				case 7:
+	    					lettres.push('quatre vingt dix sept');
+	    					break;
+	    				case 8:
+	    					lettres.push('quatre vingt dix huit');
+	    					break;
+	    				case 9:
+	    					lettres.push('quatre vingt dix neuf');
+	    					break;
+	    				}
+	    			break;
+	    	}
+	    	if (d != 10 && d != 70 && d != 90){
+	    		switch(r){
+	    			case 1:
+	    				if (d==0)
+	    					lettres.push('un.');
+	    				else
+	    					lettres.push('et un.');	
+	    				break;
+	    			case 2:
+	    				lettres.push('deux.');	
+	    				break;
+	    			case 3:
+	    				lettres.push('trois.');	
+	    				break;
+	    			case 4:
+	    				lettres.push('quatre.');	
+	    				break;
+	    			case 5:
+	    				lettres.push('cinq.');	
+	    				break;
+	    			case 6:
+	    				lettres.push('six.');	
+	    				break;
+	    			case 7:
+	    				lettres.push('sept.');	
+	    				break;
+	    			case 8:
+	    				lettres.push('huit.');	
+	    				break;
+	    			case 9:
+	    				lettres.push('neuf.');	
+	    				break;
+	    		}
+	    	}
+	    return lettres.join(' ');
+}
+	alert(convertirNombre(nombre));
+	}
+	else{
+		break;
+	}
+}
+
+    </script>
+
+</body>
+</html>
